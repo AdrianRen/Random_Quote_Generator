@@ -17,7 +17,12 @@ let quotes = [
     {
         quote: "Never doubt that a small group of thoughtful, committed, citizens can change the world. Indeed, it is the only thing that ever has.",
         source: "Margaret Mead"
-    }
+    },
+
+    {
+        quote: "I'm selfish, impatient and a little insecure. I make mistakes, I am out of control and at times hard to handle. But if you can't handle me at my worst, then you sure as hell don't deserve me at my best.",
+        source: "Marilyn Monroe"
+    },
 ];
 
 // Create a function named getRandomQuote which:
