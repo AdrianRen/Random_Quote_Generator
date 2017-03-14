@@ -1,7 +1,8 @@
 let randomQuote;
 // event listener to respond to "Show another quote" button clicks
 // when user clicks anywhere on the button, the "printQuote" function is called
-document.getElementById('loadQuote').addEventListener("click", printQuote, false);
+let loadBtn = document.getElementById('loadQuote');
+loadBtn.addEventListener("click", printQuote, false);
 
 // Create an array of JavaScript objects to hold the data for my quotes.
 // Name the array quotes. The quotes array should be accessible in the global scope
@@ -22,7 +23,7 @@ let quotes = [
     {
         quote: "I'm selfish, impatient and a little insecure. I make mistakes, I am out of control and at times hard to handle. But if you can't handle me at my worst, then you sure as hell don't deserve me at my best.",
         source: "Marilyn Monroe"
-    },
+    }
 ];
 
 // Create a function named getRandomQuote which:
@@ -39,5 +40,3 @@ function getRandomQuote() {
 function printQuote() {
 
 }
-console.log(getRandomQuote());
-console.log(Math.floor(Math.random() * quotes.length));
