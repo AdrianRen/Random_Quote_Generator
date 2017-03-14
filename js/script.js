@@ -1,4 +1,3 @@
-let randomQuote;
 // event listener to respond to "Show another quote" button clicks
 // when user clicks anywhere on the button, the "printQuote" function is called
 let loadBtn = document.getElementById('loadQuote');
@@ -6,8 +5,7 @@ loadBtn.addEventListener("click", printQuote, false);
 
 // Create an array of JavaScript objects to hold the data for my quotes.
 // Name the array quotes. The quotes array should be accessible in the global scope
-let quotes = [
-    {
+let quotes = [{
         quote: "Two things are infinite: the universe and human stupidity; and I'm not sure about the universe.",
         source: "Albert Einstein"
     },
@@ -27,16 +25,27 @@ let quotes = [
 ];
 
 // Create a function named getRandomQuote which:
+function getRandomQuote() {
     // selects a random quote object from the quotes array
     // returns the randomly selected quote object
-function getRandomQuote() {
-  randomQuote = quotes[Math.floor(Math.random() * quotes.length)];
-  return randomQuote;
+    return quotes[Math.floor(Math.random() * quotes.length)];
 }
 
 // Create a function named printQuote which follows these rules:
-    // printQuote calls the getRandomQuote function and stores the returned quote object in a variable
-    // printQuote constructs a string containing the different properties of the quote object using the following HTML template:
 function printQuote() {
-
+    // printQuote calls the getRandomQuote function and stores the returned quote object in a variable
+    let randomQuote = getRandomQuote();
+    // printQuote constructs a string containing the different properties of the quote object.
+    let content = document.getElementById('quote-box').innerHTML;
+        content = `<p class="quote"> "${randomQuote["quote"]}" </p>`;
+        content += `<p class="source"> ${randomQuote["source"]} `;
+        if (randomQuote["citation"]) {
+          content += `<span class="citation">, ${randomQuote["citation"]} </span>`;
+        } else if (randomQuote["year"]) {
+          content += `<span class="year">, ${randomQuote["year"]} </span>`;
+        }
+        content += `</p>`;
+    return content;
 }
+
+console.log(printQuote());
