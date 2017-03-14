@@ -1,7 +1,7 @@
 let selectedQuote;
 // event listener to respond to "Show another quote" button clicks
 // when user clicks anywhere on the button, the "printQuote" function is called
-// document.getElementById('loadQuote').addEventListener("click", printQuote, false);
+document.getElementById('loadQuote').addEventListener("click", printQuote, false);
 
 // Create an array of JavaScript objects to hold the data for my quotes.
 // Name the array quotes. The quotes array should be accessible in the global scope
@@ -24,8 +24,8 @@ let quotes = [
     // selects a random quote object from the quotes array
     // returns the randomly selected quote object
 function getRandomQuote() {
-  selectedQuote = quotes[Math.ceil(Math.random(quotes.length-1))];
-  return selectedQuote;
+  randomQuote = quotes[Math.floor(Math.random() * quotes.length)];
+  return randomQuote;
 }
 
 // Create a function named printQuote which follows these rules:
@@ -34,4 +34,5 @@ function getRandomQuote() {
 function printQuote() {
 
 }
-getRandomQuote();
+console.log(getRandomQuote());
+console.log(Math.floor(Math.random() * quotes.length));
