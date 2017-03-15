@@ -20,32 +20,41 @@ let quotes = [{
 
     {
         quote: "I'm selfish, impatient and a little insecure. I make mistakes, I am out of control and at times hard to handle. But if you can't handle me at my worst, then you sure as hell don't deserve me at my best.",
-        source: "Marilyn Monroe"
+        source: "Marilyn Monroe",
+        year:"1953"
+    },
+    {
+        quote: "There is said to be hope for a sick man, as long as there is life.",
+        source: "Cicero",
+        citation:"Epistulae ad Atticum (Letters to Atticus) Book IX, Letter X, section 3",
+    },
+    {
+        quote: "What you do not wish for yourself, do not do to others.",
+        source: "Confucius",
+        citation:"Analects XV.24",
+        year:"744"
     }
 ];
 
-// Create a function named getRandomQuote which:
+// Create a function named getRandomQuote
 function getRandomQuote() {
     // selects a random quote object from the quotes array
     // returns the randomly selected quote object
     return quotes[Math.floor(Math.random() * quotes.length)];
 }
 
-// Create a function named printQuote which follows these rules:
+// save the div#quote-box to a variable
+let outputDiv = document.getElementById('quote-box');
+
+// Create a function named printQuote
 function printQuote() {
     // printQuote calls the getRandomQuote function and stores the returned quote object in a variable
-    let randomQuote = getRandomQuote();
-    // printQuote constructs a string containing the different properties of the quote object.
-    let content = document.getElementById('quote-box').innerHTML;
-        content = `<p class="quote"> "${randomQuote["quote"]}" </p>`;
-        content += `<p class="source"> ${randomQuote["source"]} `;
-        if (randomQuote["citation"]) {
-          content += `<span class="citation">, ${randomQuote["citation"]} </span>`;
-        } else if (randomQuote["year"]) {
-          content += `<span class="year">, ${randomQuote["year"]} </span>`;
-        }
-        content += `</p>`;
-    return content;
+    let quotation = getRandomQuote();
+    // printQuote constructs a string containing the different properties of the quote object
+    let html = `<p class="quote"> ${quotation.quote} </p>`;
+    html += `<p class="source"> ${quotation.source}`;
+    quotation.citation && (html += `<span class="citation"> ${quotation.citation} </span>`);
+    quotation.year && (html += `<span class="year"> ${quotation.year} </span>`);
+    html += `</p>`;
+    outputDiv.innerHTML = html;
 }
-
-console.log(printQuote());
