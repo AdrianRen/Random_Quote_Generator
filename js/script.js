@@ -41,8 +41,8 @@ const printQuote = () => {
     // printQuote calls the getRandomQuote function and stores the returned quote object in a variable
     let quotation = getRandomQuote();
     // printQuote constructs a string containing the different properties of the quote object
-    let html = `<p class="quote"> ${quotation.quote} </p>`;
-    html += `<p class="source"> ${quotation.source}`;
+    let html = `<p class="quote"> ${quotation.quote} </p>
+                <p class="source"> ${quotation.source}`;
     quotation.citation && (html += `<span class="citation"> ${quotation.citation} </span>`);
     quotation.year && (html += `<span class="year"> ${quotation.year} </span>`);
     html += `</p>`;
