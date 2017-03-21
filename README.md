@@ -6,18 +6,18 @@ Project Requirements:
 
 ==========
 
-## Create an array of JavaScript objects to hold the data for your quotes. Name the array `quotes`. The `quotes` array should be accessible in the global scope.
+### Create an array of JavaScript objects to hold the data for your quotes. Name the array `quotes`. The `quotes` array should be accessible in the global scope.
 Each quote object in the quotes array should have the following properties:
 -   [ ] A `quote` property which contains a string: the text of the quote to display on the page.
 -   [ ] A `source` property which contains a string identifying the creator of the quote.
 -   [ ] An optional `citation` property which contains a string identifying the publication the quote appears in.
 -   [ ] An optional `year` property which contains a number identifying the date of the quote.
 
-## Create a function named `getRandomQuote` which:
+### Create a function named `getRandomQuote` which:
 -   [ ] selects a random quote object from the quotes array
 -   [ ] returns the randomly selected quote objects
 
-## Create a function named `printQuote` which follows these rules:
+### Create a function named `printQuote` which follows these rules:
 -   [ ] `printQuote` calls the `getRandomQuote` function and stores the returned quote object in a variable.
 -   [ ] `printQuote` constructs a string using the different properties of the quote object using the following HTML template:
 
@@ -30,7 +30,7 @@ Each quote object in the quotes array should have the following properties:
 </p>
 ```
 
-# Extra Credit
+### Extra Credit
 
 -   [ ] Add more properties to the quote object. For example, a tags property could include a list of "tags" like -- "humor", "business", "politics" -- to categorize each quote.
 -   [ ] Randomly change the background color of the page, when the quote changes
