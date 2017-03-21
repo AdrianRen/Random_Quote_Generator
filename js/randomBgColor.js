@@ -1,3 +1,4 @@
+// This function will randomly change the background color when the quote changes
 const getRandomColor = () => {
   let letters = '0123456789ABCDEF';
   let color = '#';
