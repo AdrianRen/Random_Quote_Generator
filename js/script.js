@@ -3,7 +3,17 @@ let outputDiv = document.getElementById('quote-box');
 // Create a function named getRandomQuote
 // selects a random quote object from the quotes array
 // returns the randomly selected quote object
-const getRandomQuote = () => quotes[Math.floor(Math.random() * quotes.length)];
+const getRandomQuote = () => {
+  let indexOfQuotes = Math.floor(Math.random() * quotes.length);
+  let deletedQuote = quotes.splice(indexOfQuotes,1)[0];
+  usedQuotes.push(deletedQuote);
+  if (quotes.length === 0) {
+    quotes = deletedQuote;
+    deletedQuote = [];
+  }
+  return deletedQuote;
+}
+
 // Create a function named printQuote
 const printQuote = () => {
     // printQuote calls the getRandomQuote function and stores the returned quote object in a variable

@@ -71,3 +71,6 @@ let quotes = [{
         tags:["Failure","Life"]
     }
 ];
+
+// <== Store quotes have been used.
+let usedQuotes = [];
