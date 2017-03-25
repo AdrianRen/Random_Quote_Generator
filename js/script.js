@@ -1,17 +1,22 @@
 // save the div#quote-box to a variable
 let outputDiv = document.getElementById('quote-box');
+
 // Create a function named getRandomQuote
 // selects a random quote object from the quotes array
 // returns the randomly selected quote object
 const getRandomQuote = () => {
+  // Get the random index from object quotes
   let indexOfQuotes = Math.floor(Math.random() * quotes.length);
-  let deletedQuote = quotes.splice(indexOfQuotes,1)[0];
-  usedQuotes.push(deletedQuote);
+  // Delect the random quote from array of JS objects, quotes, and store it in a variable
+  let randomQuote = quotes.splice(indexOfQuotes,1)[0];
+  // Store the random quotes in the new array called usedQuotes;
+  usedQuotes.push(randomQuote);
+  // When quotes got empty, get values from usedQuotes, and empty usedQutes.
   if (quotes.length === 0) {
-    quotes = deletedQuote;
-    deletedQuote = [];
+    quotes = usedQuotes;
+    usedQuotes = [];
   }
-  return deletedQuote;
+  return randomQuote;
 }
 
 // Create a function named printQuote
