@@ -72,5 +72,5 @@ let quotes = [{
     }
 ];
 
-// <== Store quotes have been used.
+// Store quotes that have been used.
 let usedQuotes = [];
