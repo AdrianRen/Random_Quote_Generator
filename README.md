@@ -1,7 +1,5 @@
 # Random_Quote_Generator
 
-Full Stack Javascript Treehouse Techdegree Project #1 - Random Quote Generator
-
 ## Project Requirements:
 
 ### Create an array of JavaScript objects to hold the data for your quotes. Name the array `quotes`. The `quotes` array should be accessible in the global scope.
@@ -30,7 +28,7 @@ Each quote object in the quotes array should have the following properties:
 
 ### Extra Credit
 
--   [ ] Add more properties to the quote object. For example, a tags property could include a list of "tags" like -- "humor", "business", "politics" -- to categorize each quote.
+-   [x] Add more properties to the quote object. For example, a tags property could include a list of "tags" like -- "humor", "business", "politics" -- to categorize each quote.
 -   [x] Randomly change the background color of the page, when the quote changes
 -   [ ] Don't display a random quote more than once until ALL quotes from the array have been displayed.
 -   [ ] Refresh the quote after a set amount of time. For example, every 30 seconds, make a new quote appear. (You can use the `setInterval()` or `setTimeout()` method to do this -- see the links in the Project Resources listing.)
