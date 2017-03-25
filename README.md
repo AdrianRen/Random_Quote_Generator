@@ -33,4 +33,4 @@ Each quote object in the quotes array should have the following properties:
 -   [ ] Don't display a random quote more than once until ALL quotes from the array have been displayed.
 -   [x] Refresh the quote after a set amount of time. For example, every 30 seconds, make a new quote appear. (You can use the `setInterval()` or `setTimeout()` method to do this -- see the links in the Project Resources listing.)
 
-[Live Demo](http://www.adrianren.com/Random_Quote_Generator/) :point_left Click Me :smile
+[Live Demo](http://www.adrianren.com/Random_Quote_Generator/) 
